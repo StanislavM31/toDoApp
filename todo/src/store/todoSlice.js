@@ -24,7 +24,18 @@ const todoSlice = createSlice({
       const toggledTodo = state.todos.find((todo) => todo.id === action.payload.id);
       toggledTodo.completed = !toggledTodo.completed;
     },
+    goColor(state, action){
+      console.log('state', state);
+      console.log('state', action);
+      
+      const todoToUpdate = state.todos.find((todo) => todo.id === action.payload.id);
+      if (todoToUpdate) {
+        todoToUpdate.style = { "margin-top": "50px" };
+      }
+      console.log(todoToUpdate);
+      
+    }
   },
 });
-export const { addTodo, removeTodo, toggleTodoComplete } = todoSlice.actions;
+export const { addTodo, removeTodo, toggleTodoComplete, goColor } = todoSlice.actions;
 export default todoSlice.reducer;
