@@ -2,6 +2,7 @@
   text-align: center;
   width: 1400px;
   overflow: hidden;
+  width: 100%;
 }
 
 .App-logo {
@@ -16,7 +17,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #757e90;
   /* min-height: 100vh; */
   max-height: 20vh;
   display: flex;
@@ -25,6 +26,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 20px;
 }
 
 .App-link {
