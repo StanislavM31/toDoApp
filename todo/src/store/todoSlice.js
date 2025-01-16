@@ -13,7 +13,6 @@ const todoSlice = createSlice({
       state.todos.push({
         id: new Date().toISOString(),
         text: action.payload.text,
-        /* text: action.payload.text, */
         completed: false,
       });
     },
@@ -23,19 +22,16 @@ const todoSlice = createSlice({
     toggleTodoComplete(state, action) {
       const toggledTodo = state.todos.find((todo) => todo.id === action.payload.id);
       toggledTodo.completed = !toggledTodo.completed;
+      toggledTodo.style = {"margin-top": "50px"};
+      console.log('toggledTodo');
+      console.log(toggledTodo);
     },
-    goColor(state, action){
-      console.log('state', state);
-      console.log('state', action);
-      
-      const todoToUpdate = state.todos.find((todo) => todo.id === action.payload.id);
-      if (todoToUpdate) {
-        todoToUpdate.style = { "margin-top": "50px" };
-      }
-      console.log(todoToUpdate);
-      
+    doAll(state){
+      const allCompleted = state.todos.every(todo => todo.completed);
+      state.todos.forEach(todo => {
+        todo.completed = !allCompleted});
     }
   },
 });
-export const { addTodo, removeTodo, toggleTodoComplete, goColor } = todoSlice.actions;
+export const { addTodo, removeTodo, toggleTodoComplete, doAll} = todoSlice.actions;
 export default todoSlice.reducer;

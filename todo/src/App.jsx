@@ -15,20 +15,7 @@ function App() {
     dispatch(addTodo({ text })); //ключ из reducers-action 
     setText("");
   };
-  const toggleTodoComplete = (todoId) => {
-    /*     setTodos( 
-      todos.map((todo) => { 
-        if (todo.id !== todoId) return todo; 
-        return { 
-          ...todo, 
-          completed: !todo.completed, 
-        }; 
-      }) 
-    ); */
-  };
-  const removeTodo = (todoId) => {
-    // setTodos(todos.filter((todo) => todo.id !== todoId)); 
-  };
+
   return (
     <>
       <div className="App">

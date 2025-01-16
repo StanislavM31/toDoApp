@@ -1,13 +1,12 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import { removeTodo, toggleTodoComplete, goColor } from "../store/todoSlice";
+import { removeTodo, toggleTodoComplete } from "../store/todoSlice";
 
 const TodoItem = ({ id, text, completed  }) => {
   const dispatch = useDispatch();
 
   return (
-    <li onClick={()=>dispatch(goColor({id}))}>
-    
+    <li>
       <input
         type="checkbox"
         checked={completed}
