@@ -73,7 +73,7 @@ li{
   align-items: center;
 }
 li>*{
-  margin-left: 20px;
+  margin-right: 40px;
 }
 .delete{
   color:red;
@@ -88,10 +88,10 @@ input:checked + span {
 }
 
 .todo-item {
-  border-radius: 10px; /* Закругленные углы */
-  padding: 10px; /* Отступ для лучшего внешнего вида */
-  margin-bottom: 5px; /* Отступ между элементами списка */
-  transition: background-color 0.3s; /* Плавный переход для изменения цвета фона */
+  border-radius: 10px; 
+  padding: 1px; 
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
 }
 
 .todo-item.completed {

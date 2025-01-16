@@ -15,7 +15,7 @@ const ToDoAll = () => {
       style={{
         backgroundColor: "#4CAF50",
         color: "white",
-        padding: "10px 20px",
+        padding: "10px 1px",
         border: "none",
         borderRadius: "5px",
         cursor: "pointer",
