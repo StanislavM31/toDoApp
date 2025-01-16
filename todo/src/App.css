@@ -78,10 +78,23 @@ li>*{
 .delete{
   color:red;
   font-size: 30px;
+  margin-left: auto;
 }
 .delete:hover{
   cursor: pointer;
 }
 input:checked + span {
+  text-decoration: line-through;
+}
+
+.todo-item {
+  border-radius: 10px; /* Закругленные углы */
+  padding: 10px; /* Отступ для лучшего внешнего вида */
+  margin-bottom: 5px; /* Отступ между элементами списка */
+  transition: background-color 0.3s; /* Плавный переход для изменения цвета фона */
+}
+
+.todo-item.completed {
+  background-color: #d3ffd3; 
   text-decoration: line-through;
 }

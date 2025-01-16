@@ -8,19 +8,13 @@ const TodoItem = ({ todo }) => {
     dispatch(toggleTodoComplete({id: todo.id}))
   }
   return (
-    <li
-    
-  >
+    <li>
       <input
         type="checkbox"
         checked={todo.completed}
         onChange={() => handleToggle()}
       />
-      <span className={todo.completed ? "completed" : ""}
-    style={{
-      backgroundColor: todo.completed ? '#d3ffd3' : 'transparent', 
-      textDecoration: todo.completed ? 'line-through' : 'none'
-    }}>{todo.text}</span>
+      <span className={`todo-item ${todo.completed ? 'completed' : ''}`}>{todo.text}</span>
       <span className="delete" onClick={() => dispatch(removeTodo({id: todo.id}))}>
         &times;
       </span>
