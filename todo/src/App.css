@@ -98,3 +98,16 @@ input:checked + span {
   background-color: #d3ffd3; 
   text-decoration: line-through;
 }
+
+.buttonDoAll {
+  background-color: "#4CAF50";
+  color: white;
+  padding: 10px 1px;
+  border: none;
+  border-radius: 5px;
+  cursor: "pointer";
+  font-size: 16px;
+  transition: "background-color 0.3s";
+  width: "100px";
+  height: "50px";
+}

@@ -10,20 +10,8 @@ const ToDoAll = () => {
   }
 
   return (
-    <button
+    <button className="buttonDoAll"
       onClick={handleToggleAll}
-      style={{
-        backgroundColor: "#4CAF50",
-        color: "white",
-        padding: "10px 1px",
-        border: "none",
-        borderRadius: "5px",
-        cursor: "pointer",
-        fontSize: "16px",
-        transition: "background-color 0.3s",
-        width: "100px",
-        height: "50px",
-      }}
       onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#45a049")} 
       onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#4CAF50")}
     >
