@@ -21,12 +21,13 @@ const todoSlice = createSlice({
     },
     toggleTodoComplete(state, action) {
       const toggledTodo = state.todos.find((todo) => todo.id === action.payload.id);
-      toggledTodo.completed = !toggledTodo.completed;
-      toggledTodo.style = {"margin-top": "50px"};
+      if(toggledTodo) {
+        toggledTodo.completed = !toggleTodoComplete.completed;
+      }
       console.log('toggledTodo');
       console.log(toggledTodo);
     },
-    doAll(state){
+    doAll(state, _){
       const allCompleted = state.todos.every(todo => todo.completed);
       state.todos.forEach(todo => {
         todo.completed = !allCompleted});
