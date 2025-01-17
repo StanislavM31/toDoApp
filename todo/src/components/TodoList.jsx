@@ -4,9 +4,11 @@ import {useSelector} from "react-redux"
 
 const TodoList = ({removeTodo, toggleTodoComplete }) => {
   const todos = useSelector(state=> state.todos.todos);
+  let todoListClass  = 'todo-list-empty';
+  todoListClass = todos.length > 0 ? "todo-list" : "todo-list-empty";
   return (
     <>
-      <ul>
+      <ul className = {todoListClass}>
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
